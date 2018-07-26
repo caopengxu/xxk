@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		458CC901210977AF00251496 /* GameCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CC900210977AF00251496 /* GameCharacter.swift */; };
+		458CC90521099DC400251496 /* GameScene.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458CC90421099DC400251496 /* GameScene.xib */; };
+		458CC9092109C92100251496 /* Joystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CC9082109C92100251496 /* Joystick.swift */; };
 		45D008CC210969690053F7B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D008CB210969690053F7B5 /* AppDelegate.swift */; };
 		45D008CE210969690053F7B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D008CD210969690053F7B5 /* ViewController.swift */; };
 		45D008D1210969690053F7B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D008CF210969690053F7B5 /* Main.storyboard */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		458CC900210977AF00251496 /* GameCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCharacter.swift; sourceTree = "<group>"; };
+		458CC90421099DC400251496 /* GameScene.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameScene.xib; sourceTree = "<group>"; };
+		458CC9082109C92100251496 /* Joystick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joystick.swift; sourceTree = "<group>"; };
 		45D008C8210969690053F7B5 /* xxk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xxk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D008CB210969690053F7B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45D008CD210969690053F7B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,8 +67,11 @@
 				45D008DD21096B0B0053F7B5 /* art.scnassets */,
 				45D008CB210969690053F7B5 /* AppDelegate.swift */,
 				45D008CD210969690053F7B5 /* ViewController.swift */,
-				45D008DF21096C420053F7B5 /* GameScene.swift */,
 				45D008CF210969690053F7B5 /* Main.storyboard */,
+				45D008DF21096C420053F7B5 /* GameScene.swift */,
+				458CC90421099DC400251496 /* GameScene.xib */,
+				458CC900210977AF00251496 /* GameCharacter.swift */,
+				458CC9082109C92100251496 /* Joystick.swift */,
 				45D008D22109696A0053F7B5 /* Assets.xcassets */,
 				45D008D42109696A0053F7B5 /* LaunchScreen.storyboard */,
 				45D008D72109696A0053F7B5 /* Info.plist */,
@@ -131,6 +140,7 @@
 				45D008D62109696A0053F7B5 /* LaunchScreen.storyboard in Resources */,
 				45D008DE21096B0B0053F7B5 /* art.scnassets in Resources */,
 				45D008D32109696A0053F7B5 /* Assets.xcassets in Resources */,
+				458CC90521099DC400251496 /* GameScene.xib in Resources */,
 				45D008D1210969690053F7B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				45D008E021096C420053F7B5 /* GameScene.swift in Sources */,
+				458CC901210977AF00251496 /* GameCharacter.swift in Sources */,
+				458CC9092109C92100251496 /* Joystick.swift in Sources */,
 				45D008CE210969690053F7B5 /* ViewController.swift in Sources */,
 				45D008CC210969690053F7B5 /* AppDelegate.swift in Sources */,
 			);

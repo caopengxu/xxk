@@ -35,7 +35,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="sceneView" destination="IEn-Rr-SI6" id="Gpe-rB-h9e"/>
+                        <outlet property="scnView" destination="IEn-Rr-SI6" id="hYM-2Z-mlH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
