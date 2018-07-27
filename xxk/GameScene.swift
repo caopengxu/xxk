@@ -11,8 +11,20 @@ import SceneKit
 
 class GameScene: SCNScene {
     
-    var sceneView: SCNView!
+    var scnView: SCNView!
     let cameraNode = SCNNode()
+    
+    
+    // 初始化
+    init(view: SCNView)
+    {
+        super.init()
+        
+        scnView = view
+    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     
     func setupCamera()

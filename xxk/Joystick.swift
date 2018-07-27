@@ -16,38 +16,30 @@ class Joystick: SKNode {
     var velocity: CGPoint!
     var travelLimit: CGPoint!
     var angularVelocity: CGFloat!
-    var size: CGFloat!
+    var size: Float!
     
-    var anchorPointInPoints: CGPoint!
+    var anchorPointInPoints: CGPoint = {
+        let point = CGPoint(x: 0, y: 0)
+        return point
+    }()
     
     
-//    init(aNode: SKSpriteNode)
-//    {
-//        velocity = CGPoint.zero
-//        thumbNode = aNode
-//        self.addChild(thumbNode)
-//    }
-//
-//    func joystickWithThumb(aNode: SKSpriteNode) -> Any
-//    {
-//
-//    }
-//    func initWithThumb(aNode: SKSpriteNode, bgNode: SKSpriteNode) -> Any
-//    {
-////        bgNode.position =
-//    }
+    // 初始化
     init(aNode: SKSpriteNode)
     {
-        isUserInteractionEnabled = true
+        super.init()
+        
+        self.isUserInteractionEnabled = true
         velocity = CGPoint.zero
         thumbNode = aNode
-        addChild(thumbNode)
+        self.addChild(thumbNode)
     }
-    init(aNode: SKSpriteNode, bgNode: SKSpriteNode)
+    convenience init(aNode: SKSpriteNode, bgNode: SKSpriteNode)
     {
+        self.init(aNode: aNode)
         bgNode.position = anchorPointInPoints
-        size = bgNode.size.width
-        addChild(bgNode)
+        size = Float(bgNode.size.width)
+        self.addChild(bgNode)
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -75,16 +67,24 @@ class Joystick: SKNode {
             
             if (isTracking == true && sqrtf(powf(Float(touchPoint.x - thumbNode.position.x), 2) + powf(Float(touchPoint.y - thumbNode.position.y), 2)) < size * 2)
             {
-                if (sqrtf(powf(Float(touchPoint.x - anchorPointInPoints.x), 2) + powf(Float(touchPoint.y - anchorPointInPoints.y), 2)) <= thumbNode.size.width)
+                if (sqrtf(powf(Float(touchPoint.x - anchorPointInPoints.x), 2) + powf(Float(touchPoint.y - anchorPointInPoints.y), 2)) <= Float(thumbNode.size.width))
                 {
                     let moveDifference = CGPoint(x: touchPoint.x - anchorPointInPoints.x, y: touchPoint.y - anchorPointInPoints.y)
                     thumbNode.position = CGPoint(x: anchorPointInPoints.x + moveDifference.x, y: anchorPointInPoints.y + moveDifference.y)
                 }
                 else
                 {
-//                    Double vX =
+                    let vX = touchPoint.x - anchorPointInPoints.x
+                    let vY = touchPoint.y - anchorPointInPoints.y
+                    let magV = sqrt(vX * vX + vY * vY)
+                    let aX = anchorPointInPoints.x + vX / magV * thumbNode.size.width
+                    let aY = anchorPointInPoints.y + vY / magV * thumbNode.size.width
+                    thumbNode.position = CGPoint(x: aX, y: aY)
                 }
             }
+            
+            velocity = CGPoint(x: thumbNode.position.x - self.anchorPointInPoints.x, y: thumbNode.position.y - anchorPointInPoints.y)
+            angularVelocity = -atan2(thumbNode.position.x - anchorPointInPoints.x, thumbNode.position.y - anchorPointInPoints.y)
         }
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?)

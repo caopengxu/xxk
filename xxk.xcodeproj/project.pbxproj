@@ -10,6 +10,34 @@
 		458CC901210977AF00251496 /* GameCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CC900210977AF00251496 /* GameCharacter.swift */; };
 		458CC90521099DC400251496 /* GameScene.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458CC90421099DC400251496 /* GameScene.xib */; };
 		458CC9092109C92100251496 /* Joystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CC9082109C92100251496 /* Joystick.swift */; };
+		458CC930210B222200251496 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 458CC90C210B222200251496 /* camera.png */; };
+		458CC931210B222200251496 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 458CC90D210B222200251496 /* camera@2x.png */; };
+		458CC932210B222200251496 /* dpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 458CC90E210B222200251496 /* dpad.png */; };
+		458CC933210B222200251496 /* group.png in Resources */ = {isa = PBXBuildFile; fileRef = 458CC90F210B222200251496 /* group.png */; };
+		458CC934210B222200251496 /* group@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 458CC910210B222200251496 /* group@2x.png */; };
+		458CC935210B222200251496 /* joystick.png in Resources */ = {isa = PBXBuildFile; fileRef = 458CC911210B222200251496 /* joystick.png */; };
+		458CC936210B222200251496 /* walking.png in Resources */ = {isa = PBXBuildFile; fileRef = 458CC912210B222200251496 /* walking.png */; };
+		458CC937210B222200251496 /* walking@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 458CC913210B222200251496 /* walking@2x.png */; };
+		458CC938210B222200251496 /* wrench.png in Resources */ = {isa = PBXBuildFile; fileRef = 458CC914210B222200251496 /* wrench.png */; };
+		458CC939210B222200251496 /* wrench@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 458CC915210B222200251496 /* wrench@2x.png */; };
+		458CC93A210B222200251496 /* Sasuke.dae in Resources */ = {isa = PBXBuildFile; fileRef = 458CC918210B222200251496 /* Sasuke.dae */; };
+		458CC93B210B222200251496 /* rinnegan.png in Resources */ = {isa = PBXBuildFile; fileRef = 458CC91A210B222200251496 /* rinnegan.png */; };
+		458CC93C210B222200251496 /* sasuke_ntxr000.png in Resources */ = {isa = PBXBuildFile; fileRef = 458CC91B210B222200251496 /* sasuke_ntxr000.png */; };
+		458CC93D210B222200251496 /* sasuke_ntxr002.png in Resources */ = {isa = PBXBuildFile; fileRef = 458CC91C210B222200251496 /* sasuke_ntxr002.png */; };
+		458CC93E210B222200251496 /* Shisui.dae in Resources */ = {isa = PBXBuildFile; fileRef = 458CC91E210B222200251496 /* Shisui.dae */; };
+		458CC93F210B222200251496 /* shisui_ntxr000.png in Resources */ = {isa = PBXBuildFile; fileRef = 458CC920210B222200251496 /* shisui_ntxr000.png */; };
+		458CC940210B222200251496 /* shisui_ntxr004.png in Resources */ = {isa = PBXBuildFile; fileRef = 458CC921210B222200251496 /* shisui_ntxr004.png */; };
+		458CC941210B222200251496 /* bluefreeze_back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 458CC924210B222200251496 /* bluefreeze_back.jpg */; };
+		458CC942210B222200251496 /* bluefreeze_front.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 458CC925210B222200251496 /* bluefreeze_front.jpg */; };
+		458CC943210B222200251496 /* bluefreeze_left.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 458CC926210B222200251496 /* bluefreeze_left.jpg */; };
+		458CC944210B222200251496 /* bluefreeze_right.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 458CC927210B222200251496 /* bluefreeze_right.jpg */; };
+		458CC945210B222200251496 /* bluefreeze_top.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 458CC928210B222200251496 /* bluefreeze_top.jpg */; };
+		458CC946210B222200251496 /* sun1_back.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 458CC92A210B222200251496 /* sun1_back.bmp */; };
+		458CC947210B222200251496 /* sun1_bottom.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 458CC92B210B222200251496 /* sun1_bottom.bmp */; };
+		458CC948210B222200251496 /* sun1_front.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 458CC92C210B222200251496 /* sun1_front.bmp */; };
+		458CC949210B222200251496 /* sun1_left.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 458CC92D210B222200251496 /* sun1_left.bmp */; };
+		458CC94A210B222200251496 /* sun1_right.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 458CC92E210B222200251496 /* sun1_right.bmp */; };
+		458CC94B210B222200251496 /* sun1_top.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 458CC92F210B222200251496 /* sun1_top.bmp */; };
 		45D008CC210969690053F7B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D008CB210969690053F7B5 /* AppDelegate.swift */; };
 		45D008CE210969690053F7B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D008CD210969690053F7B5 /* ViewController.swift */; };
 		45D008D1210969690053F7B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D008CF210969690053F7B5 /* Main.storyboard */; };
@@ -23,6 +51,34 @@
 		458CC900210977AF00251496 /* GameCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCharacter.swift; sourceTree = "<group>"; };
 		458CC90421099DC400251496 /* GameScene.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameScene.xib; sourceTree = "<group>"; };
 		458CC9082109C92100251496 /* Joystick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joystick.swift; sourceTree = "<group>"; };
+		458CC90C210B222200251496 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		458CC90D210B222200251496 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
+		458CC90E210B222200251496 /* dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dpad.png; sourceTree = "<group>"; };
+		458CC90F210B222200251496 /* group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = group.png; sourceTree = "<group>"; };
+		458CC910210B222200251496 /* group@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "group@2x.png"; sourceTree = "<group>"; };
+		458CC911210B222200251496 /* joystick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joystick.png; sourceTree = "<group>"; };
+		458CC912210B222200251496 /* walking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walking.png; sourceTree = "<group>"; };
+		458CC913210B222200251496 /* walking@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "walking@2x.png"; sourceTree = "<group>"; };
+		458CC914210B222200251496 /* wrench.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wrench.png; sourceTree = "<group>"; };
+		458CC915210B222200251496 /* wrench@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wrench@2x.png"; sourceTree = "<group>"; };
+		458CC918210B222200251496 /* Sasuke.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Sasuke.dae; sourceTree = "<group>"; };
+		458CC91A210B222200251496 /* rinnegan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rinnegan.png; sourceTree = "<group>"; };
+		458CC91B210B222200251496 /* sasuke_ntxr000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sasuke_ntxr000.png; sourceTree = "<group>"; };
+		458CC91C210B222200251496 /* sasuke_ntxr002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sasuke_ntxr002.png; sourceTree = "<group>"; };
+		458CC91E210B222200251496 /* Shisui.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Shisui.dae; sourceTree = "<group>"; };
+		458CC920210B222200251496 /* shisui_ntxr000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shisui_ntxr000.png; sourceTree = "<group>"; };
+		458CC921210B222200251496 /* shisui_ntxr004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shisui_ntxr004.png; sourceTree = "<group>"; };
+		458CC924210B222200251496 /* bluefreeze_back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bluefreeze_back.jpg; sourceTree = "<group>"; };
+		458CC925210B222200251496 /* bluefreeze_front.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bluefreeze_front.jpg; sourceTree = "<group>"; };
+		458CC926210B222200251496 /* bluefreeze_left.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bluefreeze_left.jpg; sourceTree = "<group>"; };
+		458CC927210B222200251496 /* bluefreeze_right.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bluefreeze_right.jpg; sourceTree = "<group>"; };
+		458CC928210B222200251496 /* bluefreeze_top.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bluefreeze_top.jpg; sourceTree = "<group>"; };
+		458CC92A210B222200251496 /* sun1_back.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = sun1_back.bmp; sourceTree = "<group>"; };
+		458CC92B210B222200251496 /* sun1_bottom.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = sun1_bottom.bmp; sourceTree = "<group>"; };
+		458CC92C210B222200251496 /* sun1_front.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = sun1_front.bmp; sourceTree = "<group>"; };
+		458CC92D210B222200251496 /* sun1_left.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = sun1_left.bmp; sourceTree = "<group>"; };
+		458CC92E210B222200251496 /* sun1_right.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = sun1_right.bmp; sourceTree = "<group>"; };
+		458CC92F210B222200251496 /* sun1_top.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = sun1_top.bmp; sourceTree = "<group>"; };
 		45D008C8210969690053F7B5 /* xxk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xxk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D008CB210969690053F7B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45D008CD210969690053F7B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +101,113 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		458CC90A210B222200251496 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				458CC90B210B222200251496 /* Images */,
+				458CC916210B222200251496 /* Models */,
+				458CC922210B222200251496 /* Skyboxes */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		458CC90B210B222200251496 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				458CC90E210B222200251496 /* dpad.png */,
+				458CC911210B222200251496 /* joystick.png */,
+				458CC90C210B222200251496 /* camera.png */,
+				458CC90D210B222200251496 /* camera@2x.png */,
+				458CC90F210B222200251496 /* group.png */,
+				458CC910210B222200251496 /* group@2x.png */,
+				458CC912210B222200251496 /* walking.png */,
+				458CC913210B222200251496 /* walking@2x.png */,
+				458CC914210B222200251496 /* wrench.png */,
+				458CC915210B222200251496 /* wrench@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		458CC916210B222200251496 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				458CC917210B222200251496 /* Sasuke */,
+				458CC91D210B222200251496 /* shisui */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		458CC917210B222200251496 /* Sasuke */ = {
+			isa = PBXGroup;
+			children = (
+				458CC918210B222200251496 /* Sasuke.dae */,
+				458CC919210B222200251496 /* textures */,
+			);
+			path = Sasuke;
+			sourceTree = "<group>";
+		};
+		458CC919210B222200251496 /* textures */ = {
+			isa = PBXGroup;
+			children = (
+				458CC91A210B222200251496 /* rinnegan.png */,
+				458CC91B210B222200251496 /* sasuke_ntxr000.png */,
+				458CC91C210B222200251496 /* sasuke_ntxr002.png */,
+			);
+			path = textures;
+			sourceTree = "<group>";
+		};
+		458CC91D210B222200251496 /* shisui */ = {
+			isa = PBXGroup;
+			children = (
+				458CC91E210B222200251496 /* Shisui.dae */,
+				458CC91F210B222200251496 /* textures */,
+			);
+			path = shisui;
+			sourceTree = "<group>";
+		};
+		458CC91F210B222200251496 /* textures */ = {
+			isa = PBXGroup;
+			children = (
+				458CC920210B222200251496 /* shisui_ntxr000.png */,
+				458CC921210B222200251496 /* shisui_ntxr004.png */,
+			);
+			path = textures;
+			sourceTree = "<group>";
+		};
+		458CC922210B222200251496 /* Skyboxes */ = {
+			isa = PBXGroup;
+			children = (
+				458CC923210B222200251496 /* BlueeFreeze */,
+				458CC929210B222200251496 /* Sun1 */,
+			);
+			path = Skyboxes;
+			sourceTree = "<group>";
+		};
+		458CC923210B222200251496 /* BlueeFreeze */ = {
+			isa = PBXGroup;
+			children = (
+				458CC924210B222200251496 /* bluefreeze_back.jpg */,
+				458CC925210B222200251496 /* bluefreeze_front.jpg */,
+				458CC926210B222200251496 /* bluefreeze_left.jpg */,
+				458CC927210B222200251496 /* bluefreeze_right.jpg */,
+				458CC928210B222200251496 /* bluefreeze_top.jpg */,
+			);
+			path = BlueeFreeze;
+			sourceTree = "<group>";
+		};
+		458CC929210B222200251496 /* Sun1 */ = {
+			isa = PBXGroup;
+			children = (
+				458CC92A210B222200251496 /* sun1_back.bmp */,
+				458CC92B210B222200251496 /* sun1_bottom.bmp */,
+				458CC92C210B222200251496 /* sun1_front.bmp */,
+				458CC92D210B222200251496 /* sun1_left.bmp */,
+				458CC92E210B222200251496 /* sun1_right.bmp */,
+				458CC92F210B222200251496 /* sun1_top.bmp */,
+			);
+			path = Sun1;
+			sourceTree = "<group>";
+		};
 		45D008BF210969690053F7B5 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +227,7 @@
 		45D008CA210969690053F7B5 /* xxk */ = {
 			isa = PBXGroup;
 			children = (
+				458CC90A210B222200251496 /* Resources */,
 				45D008DD21096B0B0053F7B5 /* art.scnassets */,
 				45D008CB210969690053F7B5 /* AppDelegate.swift */,
 				45D008CD210969690053F7B5 /* ViewController.swift */,
@@ -137,11 +301,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458CC93F210B222200251496 /* shisui_ntxr000.png in Resources */,
+				458CC945210B222200251496 /* bluefreeze_top.jpg in Resources */,
+				458CC947210B222200251496 /* sun1_bottom.bmp in Resources */,
 				45D008D62109696A0053F7B5 /* LaunchScreen.storyboard in Resources */,
 				45D008DE21096B0B0053F7B5 /* art.scnassets in Resources */,
+				458CC941210B222200251496 /* bluefreeze_back.jpg in Resources */,
+				458CC942210B222200251496 /* bluefreeze_front.jpg in Resources */,
+				458CC93C210B222200251496 /* sasuke_ntxr000.png in Resources */,
+				458CC94B210B222200251496 /* sun1_top.bmp in Resources */,
+				458CC935210B222200251496 /* joystick.png in Resources */,
 				45D008D32109696A0053F7B5 /* Assets.xcassets in Resources */,
+				458CC939210B222200251496 /* wrench@2x.png in Resources */,
+				458CC944210B222200251496 /* bluefreeze_right.jpg in Resources */,
+				458CC933210B222200251496 /* group.png in Resources */,
+				458CC937210B222200251496 /* walking@2x.png in Resources */,
 				458CC90521099DC400251496 /* GameScene.xib in Resources */,
+				458CC932210B222200251496 /* dpad.png in Resources */,
+				458CC949210B222200251496 /* sun1_left.bmp in Resources */,
+				458CC948210B222200251496 /* sun1_front.bmp in Resources */,
+				458CC938210B222200251496 /* wrench.png in Resources */,
+				458CC936210B222200251496 /* walking.png in Resources */,
+				458CC940210B222200251496 /* shisui_ntxr004.png in Resources */,
+				458CC931210B222200251496 /* camera@2x.png in Resources */,
+				458CC930210B222200251496 /* camera.png in Resources */,
+				458CC934210B222200251496 /* group@2x.png in Resources */,
+				458CC93B210B222200251496 /* rinnegan.png in Resources */,
+				458CC93A210B222200251496 /* Sasuke.dae in Resources */,
 				45D008D1210969690053F7B5 /* Main.storyboard in Resources */,
+				458CC93D210B222200251496 /* sasuke_ntxr002.png in Resources */,
+				458CC946210B222200251496 /* sun1_back.bmp in Resources */,
+				458CC943210B222200251496 /* bluefreeze_left.jpg in Resources */,
+				458CC93E210B222200251496 /* Shisui.dae in Resources */,
+				458CC94A210B222200251496 /* sun1_right.bmp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +504,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ar.scene;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,7 +522,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ar.scene;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

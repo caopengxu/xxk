@@ -21,33 +21,37 @@ enum ActionState {
 
 class GameCharacter: NSObject {
 
-    var scene: SCNScene!
+    var sceneScene: SCNScene!
     var environmentScene: SCNScene!
     var characterNode: SCNNode!
-    var nodes: Array<Any>!
-    var walkAnimations = Array<Any>()
-    var idleAnimations = Array<Any>()
+    var nodes: Array<SCNNode>!
+//    var walkAnimations = Array<CAAnimation>()
+//    var idleAnimations = Array<CAAnimation>()
+    var walkAnimations = [CAAnimation]()
+    var idleAnimations = [CAAnimation]()
+    
     var actionState: ActionState!
     var shouldStopWalkingAnimation: Bool!
     
     
+    // 初始化
     init(scene: SCNScene, name: String)
     {
-//        scene = scene
+        super.init()
         
-        var nodeNut = Array<Any>()
-        nodeNut.append(scene.rootNode.childNodes)
-        nodes = Array(nodeNut)
+        sceneScene = scene
         
+        nodes = Array(scene.rootNode.childNodes)
         characterNode = SCNNode()
         
         for eachNode in nodes
         {
-            characterNode.addChildNode(eachNode as! SCNNode)
+            characterNode.addChildNode(eachNode)
         }
         
         actionState = .ActionStateNone
     }
+    
     
     
     func setActionState(_ newState: ActionState)
@@ -91,7 +95,7 @@ class GameCharacter: NSObject {
         for animation in walkAnimations
         {
             let key = "ANIM_" + String(i)
-            gameScene.rootNode.addAnimation(animation as! SCNAnimationProtocol, forKey: key)
+            gameScene.rootNode.addAnimation(animation, forKey: key)
             i += 1
         }
         actionState = .ActionStateWalk
@@ -99,7 +103,7 @@ class GameCharacter: NSObject {
     func stopWalkAnimationInScene(_ gameScene: SCNScene)
     {
         let count = idleAnimations.count
-        for i in 0...count
+        for i in 0..<count
         {
             let key = "ANIM_" + String(i + 1)
             gameScene.rootNode.removeAnimation(forKey: key)
@@ -111,14 +115,14 @@ class GameCharacter: NSObject {
         for animation in idleAnimations
         {
             let key = "ANIM_" + String(i)
-            gameScene.rootNode.addAnimation(animation as! SCNAnimationProtocol, forKey: key)
+            gameScene.rootNode.addAnimation(animation, forKey: key)
             i += 1
         }
     }
     func stopIdleAnimationInScene(_ gameScene: SCNScene)
     {
         let count = idleAnimations.count
-        for i in 0...count
+        for i in 0..<count
         {
             let key = "ANIM_" + String(i + 1)
             gameScene.rootNode.removeAnimation(forKey: key)
