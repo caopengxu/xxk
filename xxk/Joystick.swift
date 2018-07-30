@@ -12,7 +12,7 @@ import SpriteKit
 class Joystick: SKNode {
 
     var thumbNode: SKSpriteNode!
-    var isTracking: Bool!
+    var isTracking: Bool = false
     var velocity: CGPoint!
     var travelLimit: CGPoint!
     var angularVelocity: CGFloat!
