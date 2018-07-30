@@ -53,10 +53,14 @@ class ViewController: UIViewController {
         return floorNode
     }()
     
-    var animations: Array<CAAnimation> = {
-        let array = Array<CAAnimation>()
+    var animations: [CAAnimation] = {
+        let array = [CAAnimation]()
         return array
     }()
+//    var animations: Array<CAAnimation> = {
+//        let array = Array<CAAnimation>()
+//        return array
+//    }()
     var node: SCNNode!
     
     var overlay: SKScene!
@@ -104,15 +108,15 @@ class ViewController: UIViewController {
         character.environmentScene = scene
         scene.rootNode.addChildNode(character.characterNode)
         
+        
         let url = Bundle.main.url(forResource: "art.scnassets/Kakashi(walking)", withExtension: "dae")
         let sceneSource = SCNSceneSource(url: url!, options: nil)
         let animationIds = sceneSource?.identifiersOfEntries(withClass: CAAnimation.self)
         for eachId in animationIds!
         {
             let animation = sceneSource?.entryWithIdentifier(eachId, withClass: CAAnimation.self)
-            animations.append(animation!)
+            character.walkAnimations.append(animation!)
         }
-        character.walkAnimations = NSArray(array: animations) as! [CAAnimation]
         
         
         let url2 = Bundle.main.url(forResource: "art.scnassets/Kakashi(idle)", withExtension: "dae")
@@ -121,11 +125,10 @@ class ViewController: UIViewController {
         for eachId in animationIds2!
         {
             let animation = sceneSource2?.entryWithIdentifier(eachId, withClass: CAAnimation.self)
-            animations.append(animation!)
+            character.idleAnimations.append(animation!)
         }
-        character.idleAnimations = NSArray(array: animations) as! [CAAnimation]
         
-        character.actionState = .ActionStateIdle
+        character.actionState = .actionStateIdle
     }
     
     
@@ -210,7 +213,7 @@ class ViewController: UIViewController {
         character.idleAnimations = NSArray(array: animations) as! [CAAnimation]
         
         
-        character.actionState = .ActionStateIdle
+        character.actionState = .actionStateIdle
         character.startIdleAnimationInScene(character.environmentScene)
         
         
@@ -233,6 +236,7 @@ class ViewController: UIViewController {
     }
     
     
+    // MARK: === touches
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?)
     {
         let touch = touches.randomElement()!
@@ -309,7 +313,7 @@ extension ViewController: SCNSceneRendererDelegate
     {
         if (movementJoystick.velocity.x != 0 || movementJoystick.velocity.y != 0)
         {
-            character.actionState = .ActionStateWalk
+            character.actionState = .actionStateWalk
             
             let angleDegrees = movementJoystick.angularVelocity * 57.3
             
@@ -340,7 +344,7 @@ extension ViewController: SCNSceneRendererDelegate
         }
         else
         {
-            character.actionState = .ActionStateIdle
+            character.actionState = .actionStateIdle
         }
     }
 }

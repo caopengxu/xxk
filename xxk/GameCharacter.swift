@@ -10,27 +10,66 @@ import UIKit
 import SceneKit
 
 
-enum ActionState {
-    case ActionStateNone
-    case ActionStateIdle
-    case ActionStateAttack
-    case ActionStateWalk
-    case ActionStateHurt
+enum ActionState: Int {
+    case actionStateNone = 0
+    case actionStateIdle
+    case actionStateWalk
+    case actionStateAttack
+    case actionStateHurt
 }
 
 
 class GameCharacter: NSObject {
-
+    
     var sceneScene: SCNScene!
     var environmentScene: SCNScene!
     var characterNode: SCNNode!
     var nodes: Array<SCNNode>!
-//    var walkAnimations = Array<CAAnimation>()
-//    var idleAnimations = Array<CAAnimation>()
     var walkAnimations = [CAAnimation]()
     var idleAnimations = [CAAnimation]()
     
-    var actionState: ActionState!
+    private var _actionState: ActionState!
+    var actionState: ActionState
+    {
+        get
+        {
+            return _actionState
+        }
+        set(newValue)
+        {
+            switch newValue
+            {
+                case .actionStateIdle:
+                    if (_actionState == newValue)
+                    {}
+                    else
+                    {
+                        _actionState = newValue
+                        startIdleAnimationInScene(environmentScene)
+                    }
+                    break
+                case .actionStateWalk:
+                    if (_actionState == newValue)
+                    {}
+                    else
+                    {
+                        _actionState = newValue
+                        startWalkAnimationInScene(environmentScene)
+                    }
+                    break
+                case .actionStateNone:
+                    _actionState = newValue
+                    stopIdleAnimationInScene(environmentScene)
+                    stopWalkAnimationInScene(environmentScene)
+                    break
+                default:
+                    _actionState = newValue
+                    stopIdleAnimationInScene(environmentScene)
+                    stopWalkAnimationInScene(environmentScene)
+                    break
+            }
+        }
+    }
     var shouldStopWalkingAnimation: Bool!
     
     
@@ -49,43 +88,7 @@ class GameCharacter: NSObject {
             characterNode.addChildNode(eachNode)
         }
         
-        actionState = .ActionStateNone
-    }
-    
-    
-    
-    func setActionState(_ newState: ActionState)
-    {
-        switch newState {
-        case .ActionStateIdle:
-            if (actionState == newState)
-            {}
-            else
-            {
-                actionState = newState
-                startIdleAnimationInScene(environmentScene)
-            }
-            break
-        case .ActionStateWalk:
-            if (actionState == newState)
-            {}
-            else
-            {
-                actionState = newState
-                startWalkAnimationInScene(environmentScene)
-            }
-            break
-        case .ActionStateNone:
-            actionState = newState
-            stopIdleAnimationInScene(environmentScene)
-            stopWalkAnimationInScene(environmentScene)
-            break
-        default:
-            actionState = newState
-            stopIdleAnimationInScene(environmentScene)
-            stopWalkAnimationInScene(environmentScene)
-            break
-        }
+//        actionState = .actionStateNone
     }
     
     
@@ -98,7 +101,7 @@ class GameCharacter: NSObject {
             gameScene.rootNode.addAnimation(animation, forKey: key)
             i += 1
         }
-        actionState = .ActionStateWalk
+        actionState = .actionStateWalk
     }
     func stopWalkAnimationInScene(_ gameScene: SCNScene)
     {
