@@ -45,6 +45,8 @@
 		45D008D62109696A0053F7B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D008D42109696A0053F7B5 /* LaunchScreen.storyboard */; };
 		45D008DE21096B0B0053F7B5 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D008DD21096B0B0053F7B5 /* art.scnassets */; };
 		45D008E021096C420053F7B5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D008DF21096C420053F7B5 /* GameScene.swift */; };
+		BF46648621102F0D0054738C /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = BF46648421102F0D0054738C /* spark.png */; };
+		BF46648721102F0D0054738C /* fire.scnp in Resources */ = {isa = PBXBuildFile; fileRef = BF46648521102F0D0054738C /* fire.scnp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		45D008D72109696A0053F7B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D008DD21096B0B0053F7B5 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		45D008DF21096C420053F7B5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		BF46648421102F0D0054738C /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		BF46648521102F0D0054738C /* fire.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = fire.scnp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +234,8 @@
 				458CC90A210B222200251496 /* Resources */,
 				45D008DD21096B0B0053F7B5 /* art.scnassets */,
 				45D008CB210969690053F7B5 /* AppDelegate.swift */,
+				BF46648421102F0D0054738C /* spark.png */,
+				BF46648521102F0D0054738C /* fire.scnp */,
 				45D008CD210969690053F7B5 /* ViewController.swift */,
 				45D008CF210969690053F7B5 /* Main.storyboard */,
 				45D008DF21096C420053F7B5 /* GameScene.swift */,
@@ -317,6 +323,7 @@
 				458CC933210B222200251496 /* group.png in Resources */,
 				458CC937210B222200251496 /* walking@2x.png in Resources */,
 				458CC90521099DC400251496 /* GameScene.xib in Resources */,
+				BF46648721102F0D0054738C /* fire.scnp in Resources */,
 				458CC932210B222200251496 /* dpad.png in Resources */,
 				458CC949210B222200251496 /* sun1_left.bmp in Resources */,
 				458CC948210B222200251496 /* sun1_front.bmp in Resources */,
@@ -334,6 +341,7 @@
 				458CC943210B222200251496 /* bluefreeze_left.jpg in Resources */,
 				458CC93E210B222200251496 /* Shisui.dae in Resources */,
 				458CC94A210B222200251496 /* sun1_right.bmp in Resources */,
+				BF46648621102F0D0054738C /* spark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

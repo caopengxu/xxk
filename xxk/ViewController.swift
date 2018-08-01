@@ -26,8 +26,13 @@ class ViewController: UIViewController {
     var pointLightNode: SCNNode = {
         let node = SCNNode()
         node.light = SCNLight()
-        node.light?.type = .omni
-        node.position = SCNVector3(0, 200, -100)
+        node.light?.type = .spot
+//        node.light?.color = UIColor.red
+        node.light?.castsShadow = true
+        node.light?.shadowMode = .forward
+        node.light?.spotOuterAngle = 60
+        node.light?.zFar = 2000
+        node.position = SCNVector3(0, 100, -250)
         return node
     }()
     var ambientLightNode: SCNNode = {
@@ -52,15 +57,27 @@ class ViewController: UIViewController {
         
         return floorNode
     }()
+    var planeNode: SCNNode = {
+        let node = SCNNode()
+        node.geometry = SCNBox(width: 50, height: 50, length: 50, chamferRadius: 0)
+//        node.geometry = SCNPlane(width: 50, height: 50)
+        node.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+        node.position = SCNVector3(0, 25, 0)
+        node.physicsBody = SCNPhysicsBody.static()
+        return node
+    }()
+    var rainNode: SCNNode = {
+        let node = SCNNode()
+        let particleSystem = SCNParticleSystem(named: "fire.scnp", inDirectory: nil)
+        node.addParticleSystem(particleSystem!)
+        node.position = SCNVector3(0, 25, 0)
+        return node
+    }()
     
     var animations: [CAAnimation] = {
         let array = [CAAnimation]()
         return array
     }()
-//    var animations: Array<CAAnimation> = {
-//        let array = Array<CAAnimation>()
-//        return array
-//    }()
     var node: SCNNode!
     
     var overlay: SKScene!
@@ -86,26 +103,29 @@ class ViewController: UIViewController {
         
         scene = GameScene(view: scnView)
         scene.setupSkyboxWithName("sun1", "bmp")
+        scnView.scene = scene
         
         scene.rootNode.addChildNode(cameraNode)
         scene.rootNode.addChildNode(pointLightNode)
-        scene.rootNode.addChildNode(ambientLightNode)
+//        scene.rootNode.addChildNode(ambientLightNode)
+        scene.rootNode.addChildNode(floorNode)
+        scene.rootNode.addChildNode(planeNode)
+        planeNode.addChildNode(rainNode)
         
         setupCharacter()
         character.characterNode.position = SCNVector3(0, 0, -250)
         character.characterNode.rotation = SCNVector4(0, 1, 0, CGFloat.pi)
         
-        scene.rootNode.addChildNode(floorNode)
+        let constraint = SCNLookAtConstraint(target: character.characterNode)
+        pointLightNode.constraints = [constraint]
         
-        scnView.scene = scene
         setupHUD()
     }
 
     
     func setupCharacter()
     {
-        character = GameCharacter(scene: SCNScene(named: "art.scnassets/Kakashi.dae")!, name: "SpongeBob")
-        character.environmentScene = scene
+        character = GameCharacter(scene: SCNScene(named: "art.scnassets/Kakashi.dae")!, environment: scene, name: "SpongeBob")
         scene.rootNode.addChildNode(character.characterNode)
         
         
@@ -181,45 +201,45 @@ class ViewController: UIViewController {
     }
     
     
-    func setCharacterFromModelWithName(name: String)
-    {
-        let postion = character.characterNode.position
-        let rotation = character.characterNode.rotation
-        character.characterNode.removeFromParentNode()
-        
-        character = GameCharacter(scene: SCNScene(named: name)!, name: "")
-        character.environmentScene = scene
-        scene.rootNode.addChildNode(character.characterNode)
-        
-        let url = Bundle.main.url(forResource: "art.scnassets/Kakashi(walking)", withExtension: "dae")
-        let sceneSource = SCNSceneSource(url: url!, options: nil)
-        let animationIds = sceneSource?.identifiersOfEntries(withClass: CAAnimation.self)
-        for eachId in animationIds!
-        {
-            let animation = sceneSource?.entryWithIdentifier(eachId, withClass: CAAnimation.self)
-            animations.append(animation!)
-        }
-        character.walkAnimations = NSArray(array: animations) as! [CAAnimation]
-        
-        
-        let url2 = Bundle.main.url(forResource: "art.scnassets/Kakashi(idle)", withExtension: "dae")
-        let sceneSource2 = SCNSceneSource(url: url2!, options: nil)
-        let animationIds2 = sceneSource2?.identifiersOfEntries(withClass: CAAnimation.self)
-        for eachId in animationIds2!
-        {
-            let animation = sceneSource2?.entryWithIdentifier(eachId, withClass: CAAnimation.self)
-            animations.append(animation!)
-        }
-        character.idleAnimations = NSArray(array: animations) as! [CAAnimation]
-        
-        
-        character.actionState = .actionStateIdle
-        character.startIdleAnimationInScene(character.environmentScene)
-        
-        
-        character.characterNode.position = postion
-        character.characterNode.rotation = rotation
-    }
+//    func setCharacterFromModelWithName(name: String)
+//    {
+//        let postion = character.characterNode.position
+//        let rotation = character.characterNode.rotation
+//        character.characterNode.removeFromParentNode()
+//
+//        character = GameCharacter(scene: SCNScene(named: name)!, name: "")
+//        character.environmentScene = scene
+//        scene.rootNode.addChildNode(character.characterNode)
+//
+//        let url = Bundle.main.url(forResource: "art.scnassets/Kakashi(walking)", withExtension: "dae")
+//        let sceneSource = SCNSceneSource(url: url!, options: nil)
+//        let animationIds = sceneSource?.identifiersOfEntries(withClass: CAAnimation.self)
+//        for eachId in animationIds!
+//        {
+//            let animation = sceneSource?.entryWithIdentifier(eachId, withClass: CAAnimation.self)
+//            animations.append(animation!)
+//        }
+//        character.walkAnimations = NSArray(array: animations) as! [CAAnimation]
+//
+//
+//        let url2 = Bundle.main.url(forResource: "art.scnassets/Kakashi(idle)", withExtension: "dae")
+//        let sceneSource2 = SCNSceneSource(url: url2!, options: nil)
+//        let animationIds2 = sceneSource2?.identifiersOfEntries(withClass: CAAnimation.self)
+//        for eachId in animationIds2!
+//        {
+//            let animation = sceneSource2?.entryWithIdentifier(eachId, withClass: CAAnimation.self)
+//            animations.append(animation!)
+//        }
+//        character.idleAnimations = NSArray(array: animations) as! [CAAnimation]
+//
+//
+//        character.actionState = .actionStateIdle
+//        character.startIdleAnimationInScene(character.environmentScene)
+//
+//
+//        character.characterNode.position = postion
+//        character.characterNode.rotation = rotation
+//    }
     
     
     func tap()
@@ -268,7 +288,7 @@ class ViewController: UIViewController {
                     currentCharacter = 0
                 }
                 
-                setCharacterFromModelWithName(name: characterPaths[currentCharacter])
+//                setCharacterFromModelWithName(name: characterPaths[currentCharacter])
             }
         }
     }

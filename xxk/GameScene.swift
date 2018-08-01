@@ -12,7 +12,6 @@ import SceneKit
 class GameScene: SCNScene {
     
     var scnView: SCNView!
-    let cameraNode = SCNNode()
     
     
     // 初始化
@@ -27,13 +26,6 @@ class GameScene: SCNScene {
         super.init(coder: aDecoder)
     }
     
-    
-    func setupCamera()
-    {
-        cameraNode.camera = SCNCamera()
-        cameraNode.position = SCNVector3(0, 0, 5)
-        self.rootNode.addChildNode(cameraNode)
-    }
     
     func setupSkyboxWithName(_ skybox: String, _ ext: String)
     {
